@@ -89,3 +89,5 @@ export default class MenuService {
     });
   }
 }
+
+export const menuService = new MenuService();

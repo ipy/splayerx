@@ -24,7 +24,7 @@ let mainConfig = {
   mode: 'development',
   devtool: '#source-map',
   entry: {
-    main: path.join(__dirname, '../src/main/index.js')
+    main: path.join(__dirname, '../src/main/index.ts')
   },
   externals: [
     ...Object.keys(Object.assign({}, dependencies, optionalDependencies))
