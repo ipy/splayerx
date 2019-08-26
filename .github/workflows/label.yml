@@ -1,0 +1,34 @@
+name: Labeler
+on: [pull_request]
+
+jobs:
+  label:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/labeler@v2
+      with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+
+scope-main:
+- src/main/**/*
+
+scope-renderer:
+- src/renderer/**/*
+
+scope-shared:
+- src/shared/**/*
+
+scope-build:
+- scripts/**/*
+- build/**/*
+- .travis*
+- appveyor*
+- electron-builder*
+
+scope-test:
+- test/**/*
+
+scope-i18n:
+- src/renderer/locales/**/*
